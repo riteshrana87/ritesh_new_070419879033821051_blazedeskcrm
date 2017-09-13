@@ -1,0 +1,55 @@
+						Bazedesk media library Usage example
+=============================================================================================
+NOTE:= variable and declaration please do not change modal and it's related id and classes otherwise it wont work
+	1)HIDDEN INPUTS  
+		name=gallery_files[] will have name of the file
+		name=gallery_path[] will have path of the file 
+============================================================================================	
+	
+
+INSTRUCTIONS
+===============================================================================================
+
+Add Following code in view file
+
+1)Button and div for blazedesk library
+=>add below code to your view where you want to see the button for choosing media from gallery
+ <div class="mediaGalleryDiv">
+
+                        <button type="button" name="gallery" id="gallery-btn" data-href="<?php echo base_url("Projectmanagement/Filemanager/index/?dir=uploads/&modal=true"); ?>"  class="btn btn-primary"><?= lang('cost_placeholder_uploadlib') ?></button>
+                        <div class="mediaGalleryImg">
+
+                        </div> 
+
+                    </div>
+					
+	
+2)Add This Modal Code to the view page 
+
+<div class="modal fade modal-image" id="modalGallery" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Uploads</h4>
+            </div>
+            <div class="modal-body" id="modbdy">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+3)Add this js Code to the view page 
+
+<script>
+    $('#gallery-btn').click(function () {
+        $('#modbdy').load($(this).attr('data-href'));
+        $('#modalGallery').modal('show');
+    });
+</script>
+
+
+======================================================

@@ -1,0 +1,2 @@
+[2016-03-09 10:24:38] Auth failed: ip=::1 user=brijesh.tiwari@c-metric.com host=imap.1and1.com port=143
+[2016-03-09 10:27:16] Auth failed: ip=::1 user=brijesh.tiwari@c-metric.com host=imap.1and1.com port=143

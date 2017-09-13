@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<?php 
+		/*
+		  Author : Rupesh Jorkar(RJ)
+		  Desc   : Call Head area
+		  Input  : Bunch of Array
+		  Output : All CSS and JS
+		  Date   : 04/02/2016
+		 */
+		if(empty($head))
+		{
+			$head = array();
+		}
+		echo Modules::run('Sidebar/head', $head); 
+		$system_lang = $this->common_model->get_lang();
+        ?>
+    </head>	
+    <body id=<?php echo $system_lang;?> <?php if($system_lang!='english'){?>class="bd-lang-format"<?php }?>>
+<nav class="navbar navbar-default navbar-web">
+	  <div class="menu-whitebg">
+  	<div class="container">
+		<?php
+			/*
+			  Author : Rupesh Jorkar(RJ)
+			  Desc   : Call Header area
+			  Input  : Bunch of Array
+			  Output : Top Side Header(Logo, Menu, Language)
+			  Date   : 13/01/2016
+			 */
+			if(empty($header))
+			{
+				$header = array();
+			}
+			echo Modules::run('Sidebar/header', $header);
+		?>
+	</div>
+	<div class="navbar-inverse side-collapse in" id="side-collapse">
+		<?php
+			/*
+			  Author : Rupesh Jorkar(RJ)
+			  Desc   : Call Left Menu area
+			  Input  : Bunch of array
+			  Output : Top Side Header
+			  Date   : 13/01/2016
+			 */
+			if(empty($leftmenu))
+			{
+				$leftmenu = array();
+			}
+			echo Modules::run('Sidebar/leftmenu', $leftmenu);
+		?>
+	</div>
+
+<!--/.nav-collapse -->
+<div class="clr"></div>
+<!--</div> RJ This div not started at top any reason need to discuss-->
+</nav>
+<!------------------->
+<nav class="navbar navbar-default navbar-mobile">
+  <div class="menu-whitebg2"><div class="container">
+	<?php
+		/*
+		  Author : Rupesh Jorkar(RJ)
+		  Desc   : Call Mobile Menu and Header
+		  Input  : Bunch of array
+		  Output : Top Side Header and Menu
+		  Date   : 18/01/2016
+		 */
+		if(empty($mobileheader))
+		{
+			$mobileheader = array();
+		}
+		echo Modules::run('Sidebar/mobileheader', $mobileheader);
+	?>
+  </div> </div>
+</nav>
+<!-- /.navbar-collapse -->
+  <div class="clr pad-tb6"></div>
+<div class="container">
+  <!-- Example row of columns -->
+	<?php
+		/*
+		  Author : Rupesh Jorkar(RJ)
+		  Desc   : Call Page Content Area
+		  Input  : View Page Name and Bunch of array
+		  Output : View Page
+		  Date   : 11/01/2016
+		 */
+			$this->load->view($main_content);
+	?>
+</div>
+ <?php
+            /*
+              Author : Maulik Suthar
+              Desc   : Call Footer Area
+              Input  :
+              Output : Footer Area( Menu, Content)
+              Date   : 06/02/2016
+             */
+            echo Modules::run('Sidebar/footer');
+            ?>
+<?php
+/*
+  Author : Ritesh Rana
+  Desc   : Unset Error Message Variable for all Form
+  Input  : 
+  Output : Unset Error Session
+  Date   : 28/07/2016
+ */
+echo Modules::run('Sidebar/unseterror'); 
+?>
+
+<?=$this->load->view('/Common/common','',true);?>
+
+<script type="text/javascript" src="<?php echo base_url();?>uploads/custom/js/RequestBudget/RequestBudget.js"></script>
+
+<script type="text/javascript">
+
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+	var generateFormToken = '<?php echo generateFormToken();?>';
+	var Information = '<?php echo $this->lang->line('Information');?>';
+	var COMMON_LABEL_CANCEL ='<?php echo $this->lang->line('COMMON_LABEL_CANCEL');?>';
+	var ok ='<?php echo $this->lang->line('ok');?>';
+	var delete_meg ="<?php echo $this->lang->line('delete_request_budget');?>";
+
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[2016-03-03 13:40:21] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 13:50:04] Auth failed: ip=::1 user=imap host=imap port=imap
+[2016-03-03 13:52:32] Auth failed: ip=::1 user=imap host=imap port=imap
+[2016-03-03 14:08:06] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:08:50] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:09:44] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:10:24] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:35:24] Auth failed: ip=::1 user=brijesh09tiwari09121988@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:35:35] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:35:52] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:43:00] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
+[2016-03-03 14:43:08] Auth failed: ip=::1 user=cmetrictest@gmail.com host=imap.gmail.com port=993
